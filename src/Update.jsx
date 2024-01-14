@@ -14,7 +14,7 @@ const Update = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/data/${id}`)
+      .get(`https://json-api-0rw1.onrender.com/data/${id}`)
       .then((res) => setValues(res.data))
       .catch((err) => console.log(err));
   }, [id]);
@@ -26,7 +26,7 @@ const Update = () => {
     const update = window.confirm('Are you sure you want to update?');
     if (update) {
       axios
-        .put(`http://localhost:3000/data/${id}`, values)
+        .put(`https://json-api-0rw1.onrender.com/data/${id}`, values)
         .then((res) => {
           console.log(res);
           navigate('/');

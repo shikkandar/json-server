@@ -6,14 +6,14 @@ import { Link, useNavigate } from 'react-router-dom';
 const Home = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:3000/data')
+        axios.get('https://json-api-0rw1.onrender.com/data')
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     }, []);
     const handleDelete=(id)=>{
         const confirm=window.confirm("Would you like to delete user data");
         if (confirm) {
-            axios.delete('http://localhost:3000/data/'+id)
+            axios.delete('https://json-api-0rw1.onrender.com/data/'+id)
             .catch(err=>console.log(err));
             location.reload()
         }

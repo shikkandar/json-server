@@ -7,7 +7,7 @@ const Read = () => {
   const [data, setData] = useState([]);
   const {id}=useParams();
   useEffect(() => {
-    axios.get(`http://localhost:3000/data/${id}`)
+    axios.get(`https://json-api-0rw1.onrender.com/data/${id}`)
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, [id]);

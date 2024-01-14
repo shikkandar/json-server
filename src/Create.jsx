@@ -13,7 +13,7 @@ const Create = () => {
   const navigate=useNavigate()
   const handleSubmit=(event)=>{
     event.preventDefault();
-    axios.post('http://localhost:3000/data',values)
+    axios.post('https://json-api-0rw1.onrender.com/data',values)
     .then(res => 
         {
           console.log(res);
