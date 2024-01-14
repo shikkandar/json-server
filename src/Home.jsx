@@ -10,14 +10,18 @@ const Home = () => {
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     }, []);
-    const handleDelete=(id)=>{
-        const confirm=window.confirm("Would you like to delete user data");
-        if (confirm) {
-            axios.delete('https://json-api-0rw1.onrender.com/data/'+id)
-            .catch(err=>console.log(err));
-            location.reload()
+    const handleDelete = (id) => {
+        const confirmDelete = window.confirm("Would you like to delete user data");
+        if (confirmDelete) {
+          axios
+            .delete('https://json-api-0rw1.onrender.com/data/' + id)
+            .then(() => {
+              // Update the state after successful deletion
+              setData((prevData) => prevData.filter((item) => item.id !== id));
+            })
+            .catch((err) => console.log(err));
         }
-    }
+      };
     return (
         <Container fluid className='d-flex justify-content-center align-items-center flex-column'>
             <h1 className='h2'>User Data</h1>
