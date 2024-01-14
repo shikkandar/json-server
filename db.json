@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+      "name": "zufar ahammed",
+      "email": "emily.brown@example.com",
+      "phone": "+1 (777) 888-9999",
+      "website": "http://www.emilybrown.com",
+      "id": 4
+    },
+    {
+      "name": "Aafreen",
+      "email": "olivia.miller@example.com",
+      "phone": "+1 (666) 444-3333",
+      "website": "http://www.oliviamiller.com",
+      "id": 8
+    },
+    { 
+      "name": "Sabina",
+      "email": "ethan.jackson@example.com",
+      "phone": "+1 (555) 999-7777",
+      "website": "http://www.ethanjackson.com",
+      "id": 11
+    },
+    {
+      "name": "Aashik",
+      "email": "matthew.white@example.com",
+      "phone": "+1 (333) 777-8888",
+      "website": "http://www.matthewwhite.com",
+      "id": 13
+    },
+    {
+      "name": "shikkandar Badusha",
+      "email": "emma.harris@example.com",
+      "phone": "+1 (888) 777-3333",
+      "website": "http://www.emmaharris.com",
+      "id": 14
+    },
+    {
+      "name": "faruk",
+      "email": "isabella.clark@example.com",
+      "phone": "+1 (999) 444-6666",
+      "website": "http://www.isabellaclark.com",
+      "id": 16
+    },
+    {
+      "name": "Aiden Lewis",
+      "email": "aiden.lewis@example.com",
+      "phone": "+1 (222) 777-5555",
+      "website": "http://www.aidenlewis.com",
+      "id": 17
+    },
+    {
+      "name": "Mia Turner",
+      "email": "mia.turner@example.com",
+      "phone": "+1 (666) 777-8888",
+      "website": "http://www.miaturner.com",
+      "id": 18
+    },
+    {
+      "name": "Lucas Adams",
+      "email": "lucas.adams@example.com",
+      "phone": "+1 (777) 555-6666",
+      "website": "http://www.lucasadams.com",
+      "id": 19
+    },
+    {
+      "name": "Ella Stewart",
+      "email": "ella.stewart@example.com",
+      "phone": "+1 (555) 666-7777",
+      "website": "http://www.ellastewart.com",
+      "id": 20
+    },
+    {
+      "name": "Jeremy Wallace",
+      "email": "bivocebil@mailinator.com",
+      "phone": "49449462623231",
+      "website": "+1 (574) 377-2053",
+      "id": 21
+    },
+    {
+      "name": "Berk Castaneda",
+      "email": "hypupi@mailinator.com",
+      "phone": "64464446466",
+      "website": "+1 (359) 588-6913",
+      "id": 22
+    },
+    {
+      "name": "Paki Norris",
+      "email": "nanylu@mailinator.com",
+      "phone": "85545455166",
+      "website": "+1 (805) 924-7393",
+      "id": 23
+    },
+    {
+      "name": "Logan Hanson",
+      "email": "wuxehico@mailinator.com",
+      "phone": "4545646546648",
+      "website": "+1 (993) 734-3365",
+      "id": 24
+    },
+    {
+      "name": "Jenna Castro",
+      "email": "woha@mailinator.com",
+      "phone": "8195955464546",
+      "website": "+1 (422) 626-8223",
+      "id": 25
+    }
+  ]
+}
