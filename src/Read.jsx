@@ -1,73 +1,66 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { Button } from 'react-bootstrap'
-import { Link, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 
 const Read = () => {
-  const [data, setData] = useState([]);
-  const {id}=useParams();
+  const [data, setData] = useState({});
+  const { id } = useParams();
+
   useEffect(() => {
-    axios.get(`https://json-api-0rw1.onrender.com/data/${id}`)
+    axios.get(`https://mock-api-bdg1.onrender.com/data/${id}`)
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, [id]);
-  
+
   return (
-    <>
-      <div className='d-flex w-100 vh-100 justify-content-center align-items-center bg-light'>
-      <div className='w-50 border bg-white shadow px-5 pt-3 pb-5 rounded'>
-        <h1>Add a User</h1>
-        <form>
-          <div className='mb-2'>
-            <label htmlFor="name">Name:</label>
-            <input type="text" name='name' className='form-control' disabled
-           value={data.name} />
-          </div>
-          <div className='mb-2'>
-            <label htmlFor="name">Email:</label>
-            <input type="email" name='email' className='form-control'  disabled
-            value={data.email} />
-            
-          </div>
-          <div className='mb-2'>
-            <label htmlFor="name">Phone:</label>
-            <input type="text" name='phone' className='form-control'  disabled
-           value={data.phone}  />
-          </div>
-          <div className='mb-2'>
-            <label htmlFor="name">Website:</label>
-            <input type="text" name='phone' className='form-control'  disabled
-            value={data.website} />
-          </div>
-          <Link to={`/update/${id}`}><Button variant='warning'>Edit</Button></Link>
-          <Link to='/' className='btn btn-primary ms-3'>Back</Link>
-        </form>
-      </div>
-    </div>
     <div className='d-flex w-100 vh-100 justify-content-center align-items-center bg-light'>
       <div className='w-50 border bg-white shadow px-5 pt-3 pb-5 rounded'>
-        <h1>Add a User</h1>
-        <form >
+        <h1>Read a User</h1>
+        <form>
           <div className='mb-2'>
-           <strong>Name:{data.name}</strong>
+            <strong>Name:</strong> {data.name}
           </div>
           <div className='mb-2'>
-            
-          <strong>Email:{data.email}</strong>
+            <strong>Email:</strong> {data.email}
           </div>
           <div className='mb-2'>
-          <strong>Phone:{data.phone}</strong>
+            <strong>Phone:</strong> {data.phone}
           </div>
           <div className='mb-2'>
-          <strong>Phone:{data.website}</strong>
+            <strong>Website:</strong> {data.website}
           </div>
-          <Link to={`/update/${id}`}><Button variant='warning'>Edit</Button></Link>
-          <Link to='/' className='btn btn-primary ms-3'>Back</Link>
+          <div className='mb-2'>
+            <strong>Address:</strong>
+            {data.address && (
+              <div>
+                <div>Street: {data.address.street}</div>
+                <div>Suite: {data.address.suite}</div>
+                <div>City: {data.address.city}</div>
+                <div>Zipcode: {data.address.zipcode}</div>
+              </div>
+            )}
+          </div>
+          <div className='mb-2'>
+            <strong>Company:</strong>
+            {data.company && (
+              <div>
+                <div>Name: {data.company.name}</div>
+                <div>Catch Phrase: {data.company.catchPhrase}</div>
+                <div>BS: {data.company.bs}</div>
+              </div>
+            )}
+          </div>
+          <Link to={`/update/${id}`}>
+            <Button variant='warning'>Edit</Button>
+          </Link>
+          <Link to='/' className='btn btn-primary ms-3'>
+            Back
+          </Link>
         </form>
       </div>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Read
+export default Read;
